@@ -1,0 +1,14 @@
+{
+  "name": "@alter-eco/geo",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:alter-eco/geo.git"
+  },
+  "author": "laurencedorman",
+  "license": "ISC",
+  "devDependencies": {}
+}
