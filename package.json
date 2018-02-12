@@ -2,12 +2,19 @@
   "name": "@alter-eco/geo",
   "version": "0.0.1",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:alter-eco/geo.git"
   },
   "author": "laurencedorman",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jsonminify": "^1.1.0",
+    "json-minify": "^1.0.0"
+  }
 }
