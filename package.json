@@ -1,6 +1,6 @@
 {
   "name": "@alter-eco/geo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "scripts": {
     "prepublish": "npm run build",
