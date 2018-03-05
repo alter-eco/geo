@@ -2,9 +2,12 @@
   "name": "@alter-eco/geo",
   "version": "0.0.4",
   "description": "",
+  "main": "schema.json",
   "scripts": {
-    "mapshaper": "mapshaper src/*.geojson -simplify 10% keep-shapes -o dist/ format=topojson",
-    "build": "rm -rf dist/* && npm run mapshaper",
+    "build-standard": "mapshaper src/standard/*.geojson -simplify 10% keep-shapes -o dist/ format=topojson",
+    "build-simple": "mapshaper src/simplified/*.geojson -o dist/ format=topojson",
+    "build-schema": "rm schema.json && node build-schema.js",
+    "build": "rm -rf dist/* && npm run build-standard && npm run build-simple && npm run build-schema",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -14,6 +17,9 @@
   "author": "laurencedorman",
   "license": "ISC",
   "devDependencies": {
-    "mapshaper": "^0.4.62"
+    "eslint": "^4.18.2",
+    "eslint-config-idiomatic": "^4.0.0",
+    "mapshaper": "^0.4.62",
+    "require-directory": "^2.1.1"
   }
 }
