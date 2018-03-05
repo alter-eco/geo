@@ -3,8 +3,9 @@
   "version": "0.0.4",
   "description": "",
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "gulp"
+    "mapshaper": "mapshaper src/*.geojson -simplify 10% keep-shapes -o dist/ format=topojson",
+    "build": "rm -rf dist/* && npm run mapshaper",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -13,8 +14,6 @@
   "author": "laurencedorman",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-jsonminify": "^1.1.0",
-    "json-minify": "^1.0.0"
+    "mapshaper": "^0.4.62"
   }
 }
