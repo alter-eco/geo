@@ -11,7 +11,8 @@ const mapConfig = {
     key: 'id'
   },
   'france-departements-outre-mer': {
-    key: 'code'
+    key: 'code',
+    projection: 'geoConicConformalFrance'
   },
   'france-departements-simplified': {
     key: 'code'
@@ -28,7 +29,7 @@ const mapConfig = {
 };
 
 export default function getConfig() {
-  for (item in mapConfig) {
+  for (let item in mapConfig) {
     mapConfig[item].path = `https://cdn.jsdelivr.net/npm/@alter-eco/geo@^${version}/dist/${item}.json`;
   }
 
