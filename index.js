@@ -1,5 +1,4 @@
-const fs = require('fs');
-const pkg = require('./package.json');
+import { version } from './package.json';
 
 const mapConfig = {
   'europe': {
@@ -28,8 +27,10 @@ const mapConfig = {
   }
 };
 
-for (item in mapConfig) {
-  mapConfig[item].path = `https://cdn.jsdelivr.net/npm/@alter-eco/geo@^${pkg.version}/dist/${item}.json`;
-}
+export default function getConfig() {
+  for (item in mapConfig) {
+    mapConfig[item].path = `https://cdn.jsdelivr.net/npm/@alter-eco/geo@^${version}/dist/${item}.json`;
+  }
 
-fs.writeFileSync('./schema.json', JSON.stringify(mapConfig));
+  return mapConfig;
+};
