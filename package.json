@@ -1,6 +1,6 @@
 {
   "name": "@alter-eco/geo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A collection of TopoJSON maps used at Alternatives Economiques",
   "main": "dist/main.js",
   "scripts": {
